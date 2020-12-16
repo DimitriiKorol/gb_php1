@@ -1,9 +1,12 @@
 <?php
-
+  $title = "Дизайнерские аксессуары для дома";
+  $header_text = "Аксессуары для дома, мебель и другое!";
+  $text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  $year = date("Y");
 ?>
 
 <header>
-      <div class="header">Дизайнерские аксессуары для дома</div>
+      <div class="header"><?=$title?></div>
     </header>
 
     <!-- Меню навигации-->
@@ -25,7 +28,7 @@
     </nav>
 
     <div class="container">
-      <h1>Аксессуары для дома, мебель и другое!</h1>
+      <h1><?=$header_text?></h1>
 
       <p>Добро пожаловать в&nbsp;наш интернет-магазин. <br>
   Здесь Вы&nbsp;найдете оригинальные аксессуары для Вашего дома: различные мыльницы, полотенцедержатели, вешалки и аксессуары в&nbsp;ванную комнату и&nbsp;многое другое. Все изготовлено из&nbsp;экологически чистых материалов&nbsp;&mdash; дерева и&nbsp;металла и&nbsp;позволит подчеркнуть вашу индивидуальность необычным дизайном.</p>
@@ -37,5 +40,5 @@
 
 
     <footer>
-      <span>Все права защищены &copy Dmitry 2020 </span>
+      <span>Все права защищены &copy Dmitry <?=$year?> </span>
     </footer>
