@@ -41,13 +41,13 @@ $string = "Цыган на цыпочках";
 
 echo $string . "<br>";
 
-for ($i = 0; $i < strlen($string); $i++) {
-  $strLetter = substr($string, $i, 1);
-  if (isset($letters[strtolower($strLetter)])) {
-    if ($strLetter === strtolower($strLetter)) {
+for ($i = 0; $i < mb_strlen($string); $i++) {
+  $strLetter = mb_substr($string, $i, 1);
+  if (isset($letters[mb_strtolower($strLetter)])) {
+    if ($strLetter === mb_strtolower($strLetter)) {
       $eng = $letters[$strLetter];
     } else {
-      $eng = strtoupper($letters[strtolower($strLetter)]);
+      $eng = mb_strtoupper($letters[mb_strtolower($strLetter)]);
     }
   } else {
     $eng = $strLetter;

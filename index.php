@@ -14,4 +14,9 @@
   // ДЗ №5
   echo "<br><br>Home task 3-5 <br>";
   include 'ht35.php';
-?>
+  // ДЗ №6
+  echo "<br><br>Home task 3-6 <br>";
+  include 'template.php';
+  // ДЗ №7
+  echo "<br><br>Home task 3-7 <br>";
+  include 'ht37.php';
