@@ -5,14 +5,18 @@ define("IMG_BIG", ROOT . '/img/big/');
 
 include "db.php";
 
-$id = (int)$_GET['id']; 
-
+$id = (int)$_GET['id'];
 $result = mysqli_query($db, "SELECT * FROM images WHERE id = {$id}");
-$imgres = mysqli_fetch_assoc($result);
+//$imgres = mysqli_fetch_assoc($result);
 $messg = "";
-if($result -> num_rows != 0) $imgres = mysqli_fetch_assoc($result);
-else  $messg = "No file found in db";
-?> 
+
+if ($result->num_rows != 0) {
+  $imgres = mysqli_fetch_assoc($result);
+} else {
+  $messg = "No file found in db";
+}
+var_dump($imgres);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +33,7 @@ else  $messg = "No file found in db";
     <div class="container">
 
 <? if(empty($messg)): ?>
-<div class="item"><img src="img/big/<?=$imgres['name']?>" alt="pic"></div>
+<div class="item"><img src="img/large/<?=$imgres['name']?>" alt="pic"></div>
 <? else: ?>
       <p style="color: red;"><?= $messg ?></p>
 <? endif; ?>

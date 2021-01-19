@@ -2,16 +2,12 @@
 
 define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 define("IMG_SMALL", ROOT . '/img/small/');
-define("IMG_BIG", ROOT . '/img/big/');
 
 include "db.php";
 //$imgarray = mysqli_query($db, "SELECT name FROM images");
-$imgarray = mysqli_query($db, "SELECT * FROM images");
-var_dump(mysqli_query($db, "SELECT name FROM `images`"));
+$imgarray = mysqli_query($db, "SELECT * FROM `images`");
 
-//$imgarray = array_splice(scandir('img/small/'), 2);
-
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +23,7 @@ var_dump(mysqli_query($db, "SELECT name FROM `images`"));
     <div class="container">
 <? if($imgarray -> num_rows != 0): ?>
 <? foreach ($imgarray as $name): ?>
-<div class="item"><a class="big" href="/image.php?id=<?= $name['id'] ?>"><img src="img/small/<?=$name['name']?>" alt="pic"></a></div>
+<div class="item"><a class="big" href="image.php?id=<?= $name['id'] ?>"><img src="img/small/<?=$name['name']?>" alt="pic"></a></div>
 <? endforeach; ?>
 <? else: ?>
       Галерея пуста
