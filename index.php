@@ -25,11 +25,13 @@ var_dump(mysqli_query($db, "SELECT name FROM `images`"));
   <div class="content">
     <h2 class="title-h2">Gallery</h2>
     <div class="container">
-
+<? if($imgarray -> num_rows != 0): ?>
 <? foreach ($imgarray as $name): ?>
 <div class="item"><a class="big" href="/image.php?id=<?= $name['id'] ?>"><img src="img/small/<?=$name['name']?>" alt="pic"></a></div>
 <? endforeach; ?>
-
+<? else: ?>
+      Галерея пуста
+<? endif; ?>
     </div>
     <p>Upload images:</p>
     <form class="" method="post" enctype="multipart/form-data">
