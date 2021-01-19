@@ -27,7 +27,7 @@ var_dump(mysqli_query($db, "SELECT name FROM `images`"));
     <div class="container">
 
 <? foreach ($imgarray as $name): ?>
-<div class="item"><a rel="gallery" class="big" href="img/large/<?=$name['name']?>"><img src="img/small/<?=$name['name']?>" alt="pic"></a></div>
+<div class="item"><a class="big" href="/image.php?id=<?= $name['id'] ?>"><img src="img/small/<?=$name['name']?>" alt="pic"></a></div>
 <? endforeach; ?>
 
     </div>
