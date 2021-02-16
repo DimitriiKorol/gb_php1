@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body{
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #242424;
+}
+
+.content{
+  margin: 0 auto;
+  background-color: grey;
+  width: 1001px;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.menu li{
+  margin: 0 15px;
+}
+
+.menu li a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.menu li a:hover{
+  text-shadow: 0 0 2px white;
+}
+
+.title-h2{
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.container{
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.catalog-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.item{
+  margin: 10px;
+  box-shadow: 0 0 5px #000;
+  max-width: 220px;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.big{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+.item img{
+  outline: 3px solid #fff;
+}
+
+.item>a:last-child{
+  display: block;
+  text-align: center;
+}
+
+.item-container{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cart-content{
+  width: 80%;
+  margin: 50px auto;
+  background: grey;
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.cart-item-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
